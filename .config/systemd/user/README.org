@@ -1,0 +1,10 @@
+# User SystemD Units
+
+## Replace Plasma's default window manager with i3wm.
+
+Unit files:
+
+plasma-i3.service
+plasma-kwin-x11.service -> /dev/null
+
+The service execs i3 during Plasma's startup. The soft link to /dev/null prevents Plasma from starting the default window manager. You'll need to `systemctl --user start plasma-i3` before this will work.
