@@ -32,8 +32,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(python
-     finance
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -41,22 +40,36 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
+     csharp
+     csv
+     docker
      emacs-lisp
+     finance
      git
+     haskell
      helm
-     lsp
+     html
+     javascript
+     (lsp :variables csharp-backend 'omnisharp)
      markdown
      multiple-cursors
      (org :variables
           org-startup-indented t
           org-indent-mode t)
+     (python :variables
+             python-auto-set-local-pyenv-version on-visit)
+     rust
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     ;; spell-checking
+     spell-checking
      syntax-checking
+     systemd
+     treemacs
+     typescript
+     yaml
      version-control
-     treemacs)
+     )
 
 
    ;; List of additional packages that will be installed without being wrapped
