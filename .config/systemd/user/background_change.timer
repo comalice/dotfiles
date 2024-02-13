@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer for background change.
+
+[Timer]
+OnUnitActiveSec=600
+OnActiveSec=5
+OnBootSec=1
+Persistent=true
+
+[Install]
+WantedBy=timers.target

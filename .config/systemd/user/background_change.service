@@ -1,0 +1,6 @@
+[Unit]
+Description=Change background periodically.
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/bin/feh --randomize --bg-scale /home/albert/Pictures/backgrounds/*'

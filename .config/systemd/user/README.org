@@ -9,6 +9,12 @@ plasma-kwin-x11.service -> /dev/null
 
 The service execs i3 during Plasma's startup. The soft link to /dev/null prevents Plasma from starting the default window manager. You'll need to `systemctl --user start plasma-i3` before this will work.
 
+## Background image changing.
+
+Use `feh` to change your background every so often. You can change the period in the service file.
+
+`systemctl --user start background_change.timer`
+
 ## Emacs service file
 
 `systemctl --user start emacs`
