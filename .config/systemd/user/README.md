@@ -5,6 +5,9 @@
 Unit files:
 
 - plasma-i3.service
+
+Mask the default window manager with `systemctl mask plasma-kwin_x11.service --user`
+
 - plasma-kwin-x11.service -> /dev/null
 
 The service execs i3 during Plasma's startup. The soft link to /dev/null prevents Plasma from starting the default window manager. You'll need to `systemctl --user start plasma-i3` before this will work.
